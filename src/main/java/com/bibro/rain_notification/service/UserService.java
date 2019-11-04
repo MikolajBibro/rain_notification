@@ -35,11 +35,6 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void setLastRainyWeatherForNow(AppUser user) {
-        user.setLastRainyWeather(LocalDateTime.now());
-        userRepository.save(user);
-    }
-
     public List<AppUser> findAll() {
         return userRepository.findAll();
     }
