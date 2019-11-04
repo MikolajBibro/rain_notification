@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -17,8 +18,11 @@ public class Location {
     private Integer id;
     private String longitude;
     private String latitude;
+    private String name;
+    private LocalDateTime lastRainyWeather;
     @ManyToOne
     private AppUser user;
+
 
     public Location(String longitude, String latitude) {
         this.longitude = longitude;
