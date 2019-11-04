@@ -25,7 +25,6 @@ public class AppUser {
     private String email;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Location> locations = new ArrayList<>();
-    private LocalDateTime lastRainyWeather;
 
     public AppUser(String nickname, String password) {
         this.nickname = nickname;
