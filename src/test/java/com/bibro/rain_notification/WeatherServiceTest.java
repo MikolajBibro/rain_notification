@@ -41,11 +41,6 @@ public class WeatherServiceTest {
     @InjectMocks
     private WeatherService weatherService;
 
-    @Before
-    public void setUp() {
-
-    }
-
     @Test
     public void givenBadWeather_whenCallingNotifyByLocation_thenCallSendNotification() {
         //given
