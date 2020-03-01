@@ -21,10 +21,11 @@ public class WeatherService {
     private UserService userService;
     private LocationRepository locationRepository;
 
-    public WeatherService(WeatherApi weatherApi, EmailService emailService, UserService userService) {
+    public WeatherService(WeatherApi weatherApi, EmailService emailService, UserService userService, LocationRepository locationRepository) {
         this.weatherApi = weatherApi;
         this.emailService = emailService;
         this.userService = userService;
+        this.locationRepository = locationRepository;
     }
 
     private void notifyByLocation(Location location, AppUser user) throws IOException {
